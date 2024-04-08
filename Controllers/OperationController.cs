@@ -11,7 +11,10 @@ namespace Backend.Controllers
         public decimal Get(decimal a, decimal b) => a + b;
 
         [HttpPost]
-        public decimal Add(decimal a, decimal b) => a - b;
+        public decimal Add(Numbers numbers)
+        {
+            return numbers.A - numbers.B;
+        }
 
         [HttpPut]
         public decimal Edit(decimal a, decimal b) => a * b;
@@ -20,4 +23,11 @@ namespace Backend.Controllers
         public decimal Delete(decimal a, decimal b) => a / b;
 
     }
+
+    public class Numbers
+    {
+        public decimal A { get; set; }
+        public decimal B { get; set; }
+    }
+
 }
