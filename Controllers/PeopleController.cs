@@ -9,6 +9,9 @@ namespace Backend.Controllers
     {
         [HttpGet("all")]
         public List<People> GetPeople() => Repository.People;
+
+        [HttpGet("{id}")]
+        public People Get(int id) => Repository.People.First(p => p.Id == id);
     }
 
     public class Repository
