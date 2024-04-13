@@ -1,6 +1,10 @@
-﻿namespace Backend.Services
+﻿using Backend.Controllers;
+
+namespace Backend.Services
 {
-    public interface Interface
+    public interface IPeopleService
     {
+        bool Validate(People people);
+        
     }
 }
