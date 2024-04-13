@@ -11,9 +11,9 @@ namespace Backend.Controllers
 
         private IPeopleService _peopleService;
 
-        public PeopleController(IPeopleService peopleService)
+        public PeopleController(IPeopleService people2Service)
         {
-            _peopleService = peopleService;
+            _peopleService = people2Service;
         }
 
         [HttpGet("all")]

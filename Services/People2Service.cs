@@ -2,11 +2,11 @@
 
 namespace Backend.Services
 {
-    public class PeopleService : IPeopleService
+    public class People2Service : IPeopleService
     {
         public bool Validate(People people)
         {
-            if (string.IsNullOrEmpty(people.Name) && people.Name.Length > 100)
+            if (string.IsNullOrEmpty(people.Name) && (people.Name.Length < 10 || people.Name.Length > 100 ))
             {
                 return false;
             }
